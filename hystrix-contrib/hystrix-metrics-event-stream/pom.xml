@@ -4,15 +4,15 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<name>Hystrix Examples</name>
+	<name>Hystrix Metrics Event Stream</name>
 	<groupId>com.netflix.hystrix</groupId>
-	<artifactId>hystrix-examples</artifactId>
-	<version>1.0</version>
-	<packaging>pom</packaging>
+	<artifactId>hystrix-metrics-event-stream</artifactId>
+	<version>1.1.5</version>
+	<packaging>jar</packaging>
 
 	<parent>
 		<groupId>com.netflix.hystrix</groupId>
-		<artifactId>hystrix-parent</artifactId>
+		<artifactId>hystrix-contrib-parent</artifactId>
 		<version>1.0</version>
 	</parent>
 
@@ -23,9 +23,14 @@
 			<version>1.1.5</version>
 		</dependency>
 		<dependency>
-			<groupId>ch.qos.logback</groupId>
-			<artifactId>logback-classic</artifactId>
-			<version>1.0.6</version>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-core-asl</artifactId>
+			<version>1.9.2</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5</version>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
@@ -37,13 +42,7 @@
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>2.5.1</version>
-				<configuration>
-					<source>1.6</source>
-					<target>1.6</target>
-				</configuration>
 			</plugin>
 		</plugins>
 	</build>
